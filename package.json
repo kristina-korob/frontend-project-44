@@ -19,7 +19,8 @@
     "lint:fix": "eslint . --fix"
   },
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
@@ -29,4 +30,5 @@
     "eslint": "^10.1.0",
     "globals": "^17.4.0"
   }
+  
 }
