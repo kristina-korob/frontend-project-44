@@ -7,14 +7,17 @@
     "url": "https://github.com/kristina-korob/frontend-project-44/issues"
   },
   "repository": {
-    "type": "module",
+    "type": "git",
     "url": "git+https://github.com/kristina-korob/frontend-project-44.git"
   },
   "license": "ISC",
   "author": "",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
   }
 }
