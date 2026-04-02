@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 import readlineSync from 'readline-sync'
 
 const calculator = () => {
@@ -14,17 +15,29 @@ const calculator = () => {
         const number2 = Math.floor(Math.random() * 100) + 1
         const operators = ['+', '-', '*']
         const random = operators[Math.floor(Math.random() * operators.length)]
-        const result = `${number1} ${random} ${number2}`
-        const even = number % 2 === 0 ? "yes" : "no"
-        console.log(`Question: ${number}`)
-        const userAnswer = readlineSync.question('Your answer: ')
+        
+        console.log(`Question: ${number1} ${random} ${number2}`)
 
-        if (userAnswer === even) {
+        const userAnswer = readlineSync.question('Your answer: ')
+        let result
+        switch (random) {
+            case '+':
+                result = number1 + number2
+                break;
+            case '-':
+                result = number1 - number2
+                break;
+            case '*':
+                result = number1 * number2
+                break;
+        }
+
+        if (userAnswer === String(result)) {
             console.log('Correct!')
             process += 1
         }
         else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${even}'.`)
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.`)
             console.log(`Let's try again, ${name}!`)
             return
         }
