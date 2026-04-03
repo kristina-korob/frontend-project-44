@@ -8,34 +8,22 @@ const prime = () => {
     console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
 
 
+    const isPrime = (num) => {
+        if (num < 2) return false
+        for (let i = 2; i <= Math.sqrt(num); i += 1) {
+            if (num % i === 0) return false
+        }
+        return true
+      }
+      
+
     
     const win = 3
     let process = 0
 
     while (process < win) {
         const number1 = Math.floor(Math.random() * 100) + 1
-        let result
-        switch (number1) {
-            case (number1 < 2):
-                result = "no"
-                break;
-            case (number1 === 2):
-                result = "yes"
-                break;
-            case (number1 % 2 === 0):
-                result = "no"
-                break;
-            case (number1 % 2 !== 0):
-                const limit = Math.sqrt(number1)
-                for (let i = 3; i <= limit; i += 2) {
-                    if (n % i === 0) {
-                        result = "no"
-                    }
-                }
-                break;
-            default:
-                result = "yes"
-        }
+        const result = isPrime(number1) ? 'yes' : 'no'
 
         console.log(`Question: ${number1}`)
         const userAnswer = readlineSync.question('Your answer: ')
