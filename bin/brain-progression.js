@@ -17,8 +17,8 @@ const progression = () => {
         const hiddenIndex = Math.floor(Math.random() * length)
 
         const progression = []
-        for (let j = 0; j < length; j += 1) {
-        progression.push(start + step * j)
+        for (let i = 0; i < length; i += 1) {
+            progression.push(start + step * i)
         }
 
         const correctAnswer = progression[hiddenIndex].toString()
@@ -28,12 +28,12 @@ const progression = () => {
         const userAnswer = readlineSync.question('Your answer: ')
 
         if (userAnswer === correctAnswer) {
-        console.log('Correct!')
+            console.log('Correct!')
         }
         else {
-        console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
-        console.log(`Let's try again, ${name}!`)
-        return
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
+            console.log(`Let's try again, ${name}!`)
+            return
         }
     }
 
