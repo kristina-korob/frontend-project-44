@@ -18,14 +18,12 @@ const gcd = () => {
         const userAnswer = readlineSync.question('Your answer: ')
 
         let result
-        let x
         if(number1 === number2) {
             result = number1
         }
-        else  while (number2 !== 0) {
+        else while (number2 !== 0) {
             const temp = number2
             number2 = number1 % number2
-            x = Math.round(number2 * 10)
             number1 = temp
         }
         result = number1
