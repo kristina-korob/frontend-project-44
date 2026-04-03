@@ -50,6 +50,8 @@ const prime = () => {
             return
         }
     }
+
+    console.log(`Congratulations, ${name}!`)
 }
 
 prime()
