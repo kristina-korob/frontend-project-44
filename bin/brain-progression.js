@@ -29,6 +29,7 @@ const progression = () => {
 
         if (userAnswer === correctAnswer) {
             console.log('Correct!')
+            process += 1
         }
         else {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`)
