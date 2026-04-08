@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import readlineSync from 'readline-sync';
 
 const getGcd = (a, b) => (b === 0 ? a : getGcd(b, a % b))
