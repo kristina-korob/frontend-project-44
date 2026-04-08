@@ -4,15 +4,15 @@ import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
   { 
-    files: ['**/*.{js,mjs,cjs}'], 
-    plugins: { js }, 
-    extends: ['js/recommended'], 
+    files: ['**/*.{js,mjs,cjs}'],
+    plugins: { js },
+    extends: ['js/recommended'],
     languageOptions: { globals: globals.browser },
   },
   {
     rules: {
-      quotes: ['error', 'single'],
-      semi: ['error', 'always'],
+      'quotes': ['error', 'single'],
+      'semi': ['error', 'always'],
       'comma-dangle': ['error', 'always-multiline'],
       'object-curly-spacing': ['error', 'always'],
       'array-bracket-spacing': ['error', 'never'],
@@ -24,4 +24,4 @@ export default defineConfig([
       'no-var': 'error',
     },
   },
-]);
+])
