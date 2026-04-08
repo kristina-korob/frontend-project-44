@@ -10,13 +10,13 @@ const gcd = () => {
 
 
     for (let i = 1; i <= 3; i++) {
-        const num1 = Math.floor(Math.random() * 100) + 1
-        const num2 = Math.floor(Math.random() * 100) + 1
+        const number1 = Math.floor(Math.random() * 100) + 1
+        const number2 = Math.floor(Math.random() * 100) + 1
 
         console.log(`Question: ${num1} ${num2}`)
         const userAnswer = readlineSync.question('Your answer: ')
 
-        const result = getGcd(num1, num2)
+        const result = getGcd(number1, number2)
 
         if (userAnswer === String(result)) {
             console.log('Correct!')
