@@ -24,4 +24,4 @@ export default defineConfig([
       'no-var': 'error',
     },
   },
-])
+]);
