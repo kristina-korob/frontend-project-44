@@ -15,7 +15,7 @@ const gcd = () => {
         const number1 = Math.floor(Math.random() * 100) + 1
         const number2 = Math.floor(Math.random() * 100) + 1
 
-        console.log(`Question: ${num1} ${num2}`)
+        console.log(`Question: ${number1} ${number2}`)
         const userAnswer = readlineSync.question('Your answer: ')
 
         const result = getGcd(number1, number2)
