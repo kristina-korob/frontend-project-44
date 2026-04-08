@@ -1,6 +1,5 @@
 import readlineSync from 'readline-sync';
 
-// Функция для поиска НОД
 const getGcd = (a, b) => (b === 0 ? a : getGcd(b, a % b))
 
 const gcd = () => {
