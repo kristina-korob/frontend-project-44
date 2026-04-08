@@ -1,33 +1,33 @@
 #!/usr/bin/env node
-import readlineSync from 'readline-sync';
+import readlineSync from 'readline-sync'
 
 const play = () => {
-    console.log('Welcome to the Brain Games!');
-    const name = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${name}!`);
-    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    console.log('Welcome to the Brain Games!')
+    const name = readlineSync.question('May I have your name? ')
+    console.log(`Hello, ${name}!`)
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
 
-    const win = 3;
-    let process = 0;
+    const win = 3
+    let process = 0
 
     while (process < win) {
-        const number = Math.floor(Math.random() * 100) + 1;
-        const even = number % 2 === 0 ? 'yes' : 'no';
-        console.log(`Question: ${number}`);
-        const userAnswer = readlineSync.question('Your answer: ');
+        const number = Math.floor(Math.random() * 100) + 1
+        const even = number % 2 === 0 ? 'yes' : 'no'
+        console.log(`Question: ${number}`)
+        const userAnswer = readlineSync.question('Your answer: ')
 
         if (userAnswer === even) {
-            console.log('Correct!');
-            process += 1;
+            console.log('Correct!')
+            process += 1
         }
         else {
-            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${even}'.`);
-            console.log(`Let's try again, ${name}!`);
-            return;
+            console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${even}'.`)
+            console.log(`Let's try again, ${name}!`)
+            return
         }
     }
 
-    console.log(`Congratulations, ${name}!`);
-};
+    console.log(`Congratulations, ${name}!`)
+}
 
-play();
+play()
